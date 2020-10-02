@@ -8,6 +8,7 @@ TagManager:
   - Plastico
   - Vidro
   - Metal
+  - Torre
   layers:
   - Default
   - TransparentFX

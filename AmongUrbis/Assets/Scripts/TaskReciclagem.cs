@@ -2,23 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TaskReciclagem : EventSystem
 {
     public List<GameObject> lixos;
     private List<Vector3> posicaoOrigem = new List<Vector3>();
-    private Vector3 origem = Vector3.zero;
-    private int auxiliar = 0;
-    void Start()
-    {
-        Debug.Log("iniciei");
-        origem = cameraTask.position;
-        for (int i = 0; i < lixos.Count; i++)
-        {
-            posicaoOrigem[i] = lixos[i].transform.position;
-            auxiliar++;
-        }
-    }
 
     void Update()
     {
@@ -26,10 +15,7 @@ public class TaskReciclagem : EventSystem
     }
 
     public void resetTask() {
-        for (int i = 0; i < auxiliar; i++) {
-            Debug.Log("resettask");
-            lixos[i].transform.position = posicaoOrigem[i];
-        }
+        SceneManager.LoadScene("AmongUrbis");
     }
 
     public void taskFinished() {
@@ -43,7 +29,7 @@ public class TaskReciclagem : EventSystem
     }
 
     public void taskReciclagemCompleted() {
-        cameraTask.position = origem;
+        player.transform.position = new Vector3(44.02f, 4.65f, 42.79f);
     }
 
 }

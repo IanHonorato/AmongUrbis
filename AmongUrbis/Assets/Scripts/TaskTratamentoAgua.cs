@@ -17,10 +17,13 @@ public class TaskTratamentoAgua : EventSystem
             
             if (dejetos.Count == 0)
             {
-                //task concluida
                 taskCompleted();
             }
         }
+    }
+    public void taskCompleted()
+    {
+        player.transform.position = new Vector3(-37.23f, 4.65f, 42.79f);
     }
 
 }

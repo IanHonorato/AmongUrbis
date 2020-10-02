@@ -26,8 +26,8 @@ public class Lixeira : TaskReciclagem
         }
         else 
         {
-            Debug.Log("errou");
             resetTask();
+            Debug.Log("errou");
         }
     }
 }

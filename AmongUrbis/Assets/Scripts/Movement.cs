@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
 	{
 		//mudar para getaxis
 		inputVector = new Vector3(Input.GetAxis("Horizontal") * _velocidade, playerbody.velocity.y, Input.GetAxis("Vertical") * _velocidade);
-		transform.LookAt(transform.position + new Vector3(inputVector.x, 0, inputVector.z));
+		//transform.LookAt(transform.position + new Vector3(inputVector.x, 0, inputVector.z));
 		if (Input.GetKeyDown("space")) {
 			playerbody.AddForce(0, _jumpforce, 0, ForceMode.Impulse);
 		}
